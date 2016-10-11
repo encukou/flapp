@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Ahoj!</title>
+    </head>
+    <body>
+        {% if name %}
+            {% for i in range(count) %}
+                <h1>Ahoj {{ name }}!</h1>
+            {% endfor %}
+        {% else %}
+            <h1>Ahoj</h1>
+            Právě je
+            <time datetime="{{ now }}">
+                {{ now | time }}
+            </time>
+            {{ kus_html }}
+            <img src="{{ url_for('static',
+                filename='obrazek.jpg') }}">!
+        {% endif %}
+
+        <!-- HTML komentář -->
+        {# Jinja2 komentář #}
+    </body>
+</html>
